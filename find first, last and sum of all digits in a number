@@ -1,0 +1,21 @@
+
+public class Main{
+    public static void main(String[] args){
+        int num = 92728;
+        int sum=0;
+        // int lastDigit= num % 10;
+        // System.out.println(lastDigit);
+        
+        // int firstDigit =num/10000;
+        // System.out.println(firstDigit);
+       
+        
+        
+        while(num>0){
+            int lastDigit = num %10;
+            sum = sum + lastDigit;
+            num = num/10;
+        }
+        System.out.println("the sum is:"+sum);
+    }
+}
