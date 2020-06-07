@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        int[] a = new int[5];
+        System.out.println("Enter the elements: ");
+        Scanner sc= new Scanner(System.in);
+        
+        for(int i=0; i<a.length-1; i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("Printing the element: ");
+        for(int b : a){
+            System.out.println(b);
+        }
+        
+        System.out.println("Enter the location you wan to insert:");
+        int location = sc.nextInt();
+        
+        System.out.println("Enter the number you want to inser:");
+        int value = sc.nextInt();
+        
+        for(int i=a.length-1;i>location;i--){
+            a[i]=a[i-1];
+        }
+        a[location]=value;
+        
+        System.out.println("Elements are: ");
+        for(int b : a){
+        System.out.println(b);}
+    }
+}
