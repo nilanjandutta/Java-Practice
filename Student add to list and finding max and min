@@ -1,0 +1,48 @@
+import java.util.*;
+
+class Student{
+    String name;
+    int score;
+    
+  public Student(){
+      this(" ",0);
+  }
+	public Student(String myName, int myScore){
+	    
+	    name = myName;
+	    score= myScore;
+	}
+    
+}
+
+public class Main{
+    public static void main(String[] args){
+        
+        Scanner in = new Scanner(System.in);
+        int n = Integer.parseInt(in.nextLine());
+        
+        Student st = new Student();
+        Student max = new Student();
+		Student min = new Student("",100);
+        List<Student> list = new ArrayList<>();
+        for(int i =0; i<n; i++){
+            st.name = in.next();
+            st.score = in.nextInt();
+             list.add(st);
+             
+             
+             if(max.score < st.score){
+                 max.name = st.name;
+                 max.score= st.score;
+             }
+             if(min.score > st.score){
+                 min.name= st.name;
+                 min.score=st.score;
+             }
+        }
+        
+        System.out.println(max.name + " "+ max.score);
+        System.out.println(min.name + " "+ min.score);
+        in.close();    
+    }
+}
