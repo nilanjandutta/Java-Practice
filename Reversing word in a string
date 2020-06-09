@@ -1,0 +1,10 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        String str = "This words are to be reversed";
+        String split[] = str.split(" ");//splitting the words by spaces and adding into and array
+        for(int i=split.length-1; i>=0; i--){
+            System.out.println(split[i]);
+        }
+    }
+}
