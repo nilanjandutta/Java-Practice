@@ -1,0 +1,40 @@
+
+import java.util.*;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    double num1, num2;
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter numbers to perform");
+	    
+	    num1=sc.nextDouble();
+	    num2=sc.nextDouble();
+	    
+	    System.out.println("Enter and operator to perform operations: (+,-,*,/)");
+        char optr = sc.next().charAt(0);
+        
+        double o =0;
+        switch(optr){
+            case '+':
+                 o = num1 + num2;
+                 break;
+            case '-':
+                o=num1-num2;
+                break;
+            case '*':
+                o=num1*num2;
+                break;
+            case '/':
+                o=num1/num2;
+                break;
+            default:
+            System.out.println("Not a valid  operator");
+            break;
+        }
+        
+        System.out.println(num1 + " "+ optr+" "+num2+"="+o);
+ 
+	}
+}
