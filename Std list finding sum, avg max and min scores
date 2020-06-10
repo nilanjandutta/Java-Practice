@@ -20,15 +20,18 @@ public class Main{
     public static void main(String[] args){
         
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter the size");
         int n = Integer.parseInt(in.nextLine());
         int sum =0;
         
         Student st = new Student();
         Student max = new Student();
-		  Student min = new Student(" ",100);
+		  Student min = new Student("",100);
         List<Student> list = new ArrayList<>();
         for(int i =0; i<n; i++){
+            System.out.println("Enter the names");
             st.name = in.next();
+            System.out.println("Enter the scores");
             st.score = in.nextInt();
              list.add(st);
              
@@ -46,8 +49,8 @@ public class Main{
         }
         System.out.println("The sum of score: "+sum);
         System.out.println("The average score is: "+sum/n);
-        System.out.println(max.name + " "+ max.score);
-        System.out.println(min.name + " "+ min.score);
+        System.out.println("Maximum score by: "+max.name + " "+ max.score);
+        System.out.println("Minimum score by: "+min.name + " "+ min.score);
         in.close();
         
   
