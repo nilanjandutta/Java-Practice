@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first string");
+        String a = sc.next();
+        
+        System.out.println("Enter the second string");
+        String b = sc.next();
+        
+        System.out.println("Anagrams status : "+checkAnagram(a,b));
+        
+    }
+    
+    public static boolean checkAnagram(String a, String b){
+        
+        char[] aa = a.toCharArray();
+        char[] bb =b.toCharArray();
+        
+        if(aa.length ==bb.length){
+    
+        Arrays.sort(aa);
+        Arrays.sort(bb);
+        
+        //comparing Character arrays
+        
+        return Arrays.equals(aa,bb);}
+        else{
+            return false;
+        }
+    }
+}
